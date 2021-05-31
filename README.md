@@ -21,7 +21,10 @@ The planner is based on the following steps:
 
 # Running it:
 
-python ndcpces.py -o <domain-file> -f <problem-file> -lookahead_mode 0 -decomposition true
+python ndcpces.py -o domain-file -f problem-file -lookahead_mode 0 -decomposition true
+
+Example: 
+  python ndcpces.py -o icaps_21_benchmarks/ndcpces/bmtuc/d.pddl -f icaps_21_benchmarks/ndcpces/bmtuc/instances/p-2-3.pddl -lookahead_mode 0 -decomposition true
 
 (This happened to be the fastest version as for the ICAPS-21 paper)
 
