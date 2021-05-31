@@ -1,14 +1,14 @@
 # ndcpces
 
 NDCPCES is a non-deterministic conformant planner based on counterexample guided sampling. The planner is presented in the paper:
-"Non-Deterministic Conformant Planning Using a Counterexample-GuidedIncremental Compilation to Classical Planning" by Enrico Scala and Alban Grastien, ICAPS-21
+"Non-Deterministic Conformant Planning Using a Counterexample-Guided Incremental Compilation to Classical Planning" by Enrico Scala and Alban Grastien, ICAPS-21.
 
 The planner is based on the following steps:
 
-1 - an initial (random) guess on the outcome is given
-2 - a classical planning problem is generated on such a first random determinisation
-3 - if the plan found is proved invalid, a NFA is built to prevent the planner to found the plan again
-4 - if the plan is not found, there is no plan for the conformant planning problem either
+1 - an initial (random) determinisation of each action is given;
+2 - a classical planning problem is generated on such a first random determinisation;
+3 - if the plan found is proved invalid, a NFA is built to prevent the planner to find this plan again;
+4 - if no plan is found, there is no valid plan for the conformant planning problem either.
 
 # Dependencies
 
@@ -27,5 +27,4 @@ python ndcpces.py -o <domain-file> -f <problem-file> -lookahead_mode 0 -decompos
 
 # Benchmarks
 
-In the ICAPS-21 benchmark folder you can find all the benchmarks used for the ICAPS-21 paper. The folder contains also slightly revised encoding done for using k1k0 and mbp, two other
-planners that are capable of handling planning with non-deterministic effects under no observability constraint.
+In the ICAPS-21 benchmark folder you can find all the benchmarks used for the ICAPS-21 paper. The folder contains also slightly revised encoding done for using k1k0 and mbp, two other planners that are capable of handling planning with non-deterministic effects under no observability constraint.
